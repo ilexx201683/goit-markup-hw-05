@@ -137,6 +137,9 @@ body {
   letter-spacing: 0.03em;
   color: var(--portfolio-btn-text-color);
   background-color: var(--portfolio-btn-background-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    backgound-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   max-width: 145px;
   border-radius: 4px;
@@ -196,6 +199,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.header-link.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -1px;
 }
 
 .header-site-nav .link {
@@ -204,6 +218,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-site-nav .link:hover,
 .header-site-nav .link:focus {
@@ -220,6 +235,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts .link:hover,
 .header-contacts .link:focus {
@@ -229,6 +245,7 @@ body {
 .contacts-icon {
   fill: currentColor;
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-icon:hover,
 .contacts-icon:focus {
@@ -436,10 +453,12 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -470,6 +489,7 @@ body {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:hover,
@@ -491,6 +511,7 @@ body {
 
 .clients-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon,
@@ -533,6 +554,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
@@ -545,6 +567,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts .contacts:hover,
 .footer-contacts .contacts:focus {
@@ -589,10 +612,12 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
   fill: #ffffff;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -634,6 +659,7 @@ body {
   flex-basis: calc((100% - 9 * 30px) / 9);
   margin-left: 30px;
   margin-bottom: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards-works-item:hover,
