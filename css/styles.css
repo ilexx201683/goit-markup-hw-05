@@ -666,6 +666,10 @@ body {
 .cards-works-item:focus {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+.cards-works-item:hover .cards-works-top-text,
+.cards-works-item:focus .cards-works-top-text {
+  transform: translate(0);
+}
 
 .cards-works-text {
   padding: 20px 24px;
@@ -689,4 +693,33 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: inherit;
+}
+
+.cards-works-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-works-top-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--third-text-color);
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /*opacity: 0;*/
+}
+
+.cards-works-top-text:hover {
+  /*opacity: 1;*/
 }
